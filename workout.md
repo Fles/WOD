@@ -6,8 +6,10 @@ B = 45' Workout (+ 15' rest)
 
 C = 50' Workout (+ 10' rest)
 
+REST = 90'
+
 Workout plan:
-1-9A + [90'rest] + 1-9B + [90'rest] + 1-9C
+1-9A + REST + 1-9B + REST + 1-9C
 
 | 1   | Cardio      |
 | --- | ----------- |
