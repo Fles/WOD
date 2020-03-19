@@ -4,8 +4,8 @@
 - B = 45' Workout (+ 15' rest)
 - C = 50' Workout (+ 10' rest)
 
-Workout plan:
-1A...9A + REST + 1B...9B + REST + 1C...9C
+Workout plan `BODY FOCUS`:
+`1A...9A` + REST + `1B...9B` + REST + `1C...9C`
 
 | 1   | Cardio      |
 | --- | ----------- |
@@ -61,5 +61,5 @@ Workout plan:
 | B   | leg lifts |
 | C   | arm lifts |
 
-alternative plan:
-ABC1 + 10'rest + ABC2 + 10'rest + ABC3 + 10'... ... ABC9
+Alternative plan `FEATURE FOCUS`:
+`ABC1` + 10'rest + `ABC2` + 10'rest + `ABC3` + 10'... ... `ABC9`
