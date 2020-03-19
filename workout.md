@@ -3,7 +3,6 @@
 - A = 45' Workout (+ 15' rest)
 - B = 45' Workout (+ 15' rest)
 - C = 50' Workout (+ 10' rest)
-- REST = 90'
 
 Workout plan:
 1A...9A + REST + 1B...9B + REST + 1C...9C
@@ -63,4 +62,4 @@ Workout plan:
 | C   | arm lifts |
 
 alternative plan:
-ABC1 + [15'rest] + ABC2 + [15' rest] + ABC3 + [15'... ... ABC9
+ABC1 + 10'rest + ABC2 + 10'rest + ABC3 + 10'... ... ABC9
