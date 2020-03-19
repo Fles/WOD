@@ -1,15 +1,12 @@
 # Functional training
 
-A = 45' Workout (+ 15' rest)
-
-B = 45' Workout (+ 15' rest)
-
-C = 50' Workout (+ 10' rest)
-
-REST = 90'
+- A = 45' Workout (+ 15' rest)
+- B = 45' Workout (+ 15' rest)
+- C = 50' Workout (+ 10' rest)
+- REST = 90'
 
 Workout plan:
-1-9A + REST + 1-9B + REST + 1-9C
+1A...9A + REST + 1B...9B + REST + 1C...9C
 
 | 1   | Cardio      |
 | --- | ----------- |
@@ -66,4 +63,4 @@ Workout plan:
 | C   | arm lifts |
 
 alternative plan:
-ABC1 + [15'rest] + ABC2 + [15' rest] + ABC3 + [15'...
+ABC1 + [15'rest] + ABC2 + [15' rest] + ABC3 + [15'... ... ABC9
