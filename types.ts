@@ -1,9 +1,9 @@
 export interface Exercise {
   name: string;
-  level: "A" | "B" | "C";
+  imageUrl: string;
 }
 
-export interface ExerciseGroup {
+export interface Base {
   name: string;
   exercises: Exercise[];
 }
