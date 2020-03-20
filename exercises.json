@@ -1,0 +1,128 @@
+[
+  {
+    "name": "Cardio",
+    "variations": [
+      {
+        "name": "fast feet"
+      },
+      {
+        "name": "mummy kicks"
+      },
+      {
+        "name": "burpees"
+      }
+    ]
+  },
+  {
+    "name": "Lunges",
+    "variations": [
+      {
+        "name": "leg L"
+      },
+      {
+        "name": "leg R"
+      },
+      {
+        "name": "L + R"
+      }
+    ]
+  },
+  {
+    "name": "Crunches",
+    "variations": [
+      {
+        "name": "short"
+      },
+      {
+        "name": "deep"
+      },
+      {
+        "name": "hold"
+      }
+    ]
+  },
+  {
+    "name": "Superman",
+    "variations": [
+      {
+        "name": "diagonal"
+      },
+      {
+        "name": "all"
+      },
+      {
+        "name": "hold"
+      }
+    ]
+  },
+  {
+    "name": "Pushups",
+    "variations": [
+      {
+        "name": "high hold"
+      },
+      {
+        "name": "regular"
+      },
+      {
+        "name": "low hold"
+      }
+    ]
+  },
+  {
+    "name": "Scissors",
+    "variations": [
+      {
+        "name": "vertical"
+      },
+      {
+        "name": "horizontal"
+      },
+      {
+        "name": "hold"
+      }
+    ]
+  },
+  {
+    "name": "Squats",
+    "variations": [
+      {
+        "name": "narrow"
+      },
+      {
+        "name": "wide"
+      },
+      {
+        "name": "wall sit"
+      }
+    ]
+  },
+  {
+    "name": "Mountain climbers",
+    "variations": [
+      {
+        "name": "R - L"
+      },
+      {
+        "name": "fast"
+      },
+      {
+        "name": "spiderman"
+      }
+    ]
+  },
+  {
+    "name": "Plank",
+    "variations": [
+      {
+        "name": "regular"
+      },
+      {
+        "name": "leg lifts"
+      },
+      {
+        "name": "arm lifts"
+      }
+    ]
+  }
+]
