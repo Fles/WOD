@@ -36,8 +36,8 @@ const Index = ({ exercises }) => {
   React.useEffect(() => {
     let interval = null
     if (seconds === 0) {
-      setCurrent(current => current + 1)
       setSeconds(exercises[current + 1].time)
+      setCurrent(current => current + 1)
     }
     if (isActive) {
       interval = setInterval(() => {
