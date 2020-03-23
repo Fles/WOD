@@ -84,7 +84,14 @@ Index.getInitialProps = async function() {
         { ...a, time: EXERCISE_TIME },
         { name: 'Rest', media: 'head-tilt', time: REST_TIME }
       ),
-    [{ name: 'Prepare', time: PREPARE_TIME, media: 'head-tilt' }]
+    [
+      {
+        name: 'Prepare',
+        difficulty: 'easy',
+        time: PREPARE_TIME,
+        media: 'head-tilt',
+      },
+    ]
   )
 
   return {
