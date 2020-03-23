@@ -31,7 +31,7 @@ class MyDocument extends Document {
               body {
                 height: 100%;
                 width: 100%;
-                background-color: #ddd;
+                background-color: #ccc;
               }
               *,
               *:after,

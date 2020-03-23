@@ -1,8 +1,10 @@
+Link to [App (in feature focus mode)](https://wod-psi.now.sh/)
+
 # Functional training
 
 - `A` = 45' work + 15' rest
 - `B` = 45' work + 15' rest
-- `C` = 50' work + 10' rest
+- `C` = 45' work + 15' rest
 
 ## Workout plan
 
@@ -12,7 +14,7 @@
 
 ### FEATURE FOCUS:
 
-`ABC1` + _10'rest_ + `ABC2` + _10'rest_ + `ABC3` + _10'_... ... `ABC9`
+`ABC1` + _15'rest_ + `ABC2` + _15'rest_ + `ABC3` + _15'_... ... `ABC9`
 
 ## Exercises:
 
