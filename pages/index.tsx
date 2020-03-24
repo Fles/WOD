@@ -49,11 +49,13 @@ const Index = ({ exercises }) => {
             />
           </Paper>
         </Grid>
-        <Grid item xs={3}>
-          <Paper>
-            <ExerciseCard {...nextExercise} key={nextExercise.name} />
-          </Paper>
-        </Grid>
+        {nextExercise ? (
+          <Grid item xs={3}>
+            <Paper>
+              <ExerciseCard {...nextExercise} key={nextExercise.name} />
+            </Paper>
+          </Grid>
+        ) : null}
       </Grid>
     </div>
   )
@@ -61,9 +63,8 @@ const Index = ({ exercises }) => {
 
 Index.getInitialProps = async function() {
   const exercises = await require('../public/exercises.json')
-  const result = makeTraining(exercises, 1, 1, 1)
   return {
-    exercises: result.map(entry => entry),
+    exercises: makeTraining(exercises, 10, 45, 10),
   }
 }
 
