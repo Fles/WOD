@@ -1,5 +1,5 @@
 export interface Exercise {
-  name: s
+  name: string
   type: 'exercise' | 'rest' | 'prepare'
   difficulty: 'hard' | 'medium' | 'easy'
   target: string[]
