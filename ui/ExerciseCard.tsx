@@ -5,7 +5,7 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Avatar from '@material-ui/core/Avatar'
 import IconButton from '@material-ui/core/IconButton'
 import FavoriteIcon from '@material-ui/icons/Favorite'
-import LinearProgress from '@material-ui/core/LinearProgress'
+import Chip from '@material-ui/core/Chip'
 import Typography from '@material-ui/core/Typography'
 import Collapse from '@material-ui/core/Collapse'
 import CardContent from '@material-ui/core/CardContent'
@@ -41,6 +41,9 @@ const useStyles = makeStyles(theme => ({
   avatarText: {
     fontSize: 16,
   },
+  chip: {
+    margin: theme.spacing(0.5),
+  },
 }))
 export default function ExerciseCard({
   name,
@@ -50,22 +53,26 @@ export default function ExerciseCard({
   instructions = '',
   target = [],
   difficulty = '',
+  type,
 }) {
   const classes = useStyles()
   const [expanded, setExpanded] = React.useState(false)
 
-  const normalise = value => ((value - 0) * 100) / (time - 0)
+  const normalise = value => ((value - 1) * 100) / (time - 0)
 
   const handleExpandClick = () => {
     setExpanded(!expanded)
   }
 
-  const avatarColor = name => {
-    if (name === 'Rest') {
+  const avatarColor = type => {
+    if (type === 'rest') {
       return 'green'
     }
-    if (name === 'Prepare') {
+    if (type === 'prepare') {
       return 'orange'
+    }
+    if (type === 'cool-down') {
+      return 'green'
     }
     return 'red'
   }
@@ -75,11 +82,11 @@ export default function ExerciseCard({
       <CardHeader
         avatar={
           <Avatar
-            className={classes[avatarColor(name)]}
-            aria-label="time"
+            className={classes[avatarColor(type)]}
+            aria-label="progress"
             variant="square"
           >
-            <span className={classes.avatarText}>{time}'</span>
+            <span className={classes.avatarText}>{progress || time}'</span>
           </Avatar>
         }
         action={
@@ -110,18 +117,13 @@ export default function ExerciseCard({
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>Target muscles: {target.join(', ')}</Typography>
           <Typography paragraph>Difficulty: {difficulty}</Typography>
           <Typography paragraph>Instructions: {instructions}</Typography>
+          {target.map(data => {
+            return <Chip key={data} label={data} className={classes.chip} />
+          })}
         </CardContent>
       </Collapse>
-
-      {progress && (
-        <LinearProgress
-          variant="determinate"
-          value={100 - normalise(progress)}
-        />
-      )}
     </Card>
   )
 }

@@ -1,6 +1,22 @@
 [
   {
     "name": "Fast feet",
+    "type": "exercise",
+    "difficulty": "medium",
+    "target": ["calves", "glutes", "quadriceps"],
+    "instructions": "With your feet at hips width, lower your body down into a half squat position and reach out with your arms in front of you. Lift up your heels so you are on the balls of your feet. Hold this body position, then start running as fast as you can on the spot. Stay low as your run and feel the burn in your quads.",
+    "media": "fast-feet"
+  },
+  {
+    "name": "High knees",
+    "difficulty": "medium",
+    "target": ["abs", "calves", "glutes", "hamstrings", "quadriceps"],
+    "instructions": "From a standing start, with your arms held out in front of you at shoulder height, start running on the spot as fast as you can by lifting your knees up to waist height for each stride. Stay up on your toes and keep your back upright and straight, avoid leaning backwards and keep your arms as still as possible.",
+    "media": "high-knee"
+  },
+  {
+    "name": "Fast feet",
+    "type": "exercise",
     "difficulty": "medium",
     "target": ["calves", "glutes", "quadriceps"],
     "instructions": "With your feet at hips width, lower your body down into a half squat position and reach out with your arms in front of you. Lift up your heels so you are on the balls of your feet. Hold this body position, then start running as fast as you can on the spot. Stay low as your run and feel the burn in your quads.",
@@ -15,6 +31,7 @@
   },
   {
     "name": "Burpees",
+    "type": "exercise",
     "difficulty": "hard",
     "target": [
       "abs",
@@ -33,6 +50,7 @@
   },
   {
     "name": "Forward lunges",
+    "type": "exercise",
     "difficulty": "medium",
     "target": ["calves", "glutes", "hamstrings", "quadriceps"],
     "instructions": "Start standing up with your feet at hip width, and your hands on your hips so that you can feel that they stay level as you step forwards and back. Also, before you start make sure you have enough clear level floor space in front of you to be able to take a big step forwards. Rise up on to your toes and balance yourself, then take a long step forwards with your right foot. As your front foot makes contact with the floor, bend at both knees to lower yourself down into the lunge position. At the bottom of your lunge, your knees should both be bent to approximately 90 degrees. From the bottom position, push up and backwards using your front foot with enough energy so that you can step the front foot back to join side by side with the rear foot. As you return back to the start position try to stay up on your toes and balance without putting the heals down. Repeat this whole step, knee bend and push back process with the other leg. Make sure you complete an even number of repetitions on each leg during the time for the exercise. Watch out for your front heal lifting up off the floor, try to keep your heal down and push up out of your heal to return to the standing position. Avoid leaning forwards or backwards when lunging, aim to keep an upright spine.",
@@ -40,6 +58,7 @@
   },
   {
     "name": "Rear lunges",
+    "type": "exercise",
     "difficulty": "medium",
     "target": ["calves", "glutes", "hamstrings", "quadriceps"],
     "instructions": "Start standing up with your feet at hip width, and your hands on your hips so that you can feel that they stay level as you step back and forth. Also, before you start make sure you have enough clear level floor space behind you to be able to take a big step backwards. Take a long step backwards with your left foot. Plant your back toes on the floor at hip width and as your toes makes contact with the floor, bend at both knees to lower yourself down into the lunge position. At the bottom of your lunge, your knees should both be bent to approximately 90 degrees. From the bottom position, push up using your front leg and step your back foot forwards, landing it next to your front foot at hip width. Repeat this whole step back, knee bend and step up process with the other leg. Make sure you complete an even number of repetitions on each leg during the time for the exercise. Try to keep some sideways width between your feet when lunging rather than lunging on one line as if you were on a tight rope. This will make you more balanced. Aim to keep an upright spine during the movement.",
@@ -47,6 +66,7 @@
   },
   {
     "name": "Iron mike",
+    "type": "exercise",
     "difficulty": "hard",
     "target": ["calves", "glutes", "hamstrings", "quadriceps"],
     "instructions": "Start standing up with your feet at hip width. Also, before you start make sure you have enough clear level floor space in front and behind you to be able to take a step forwards and backwards. Place your hands on behind your head with your elbows out wide to help keep your shoulders back. Jump forwards with your right leg and backwards with your left leg. Plant your back toes on the floor at hip width and as your toes makes contact with the floor, bend at both knees to lower yourself down into the lunge position. At the bottom of your lunge, your knees should both be bent to approximately 90 degrees. From the bottom position, push up explosively using both legs, jump and switch your legs stance so that your left leg is forwards and your right leg behind you. Lower down into a lunge on this side and repeat the jump, switch and lunge movement on each side for the duration of the exercise. Try to keep some sideways width between your feet when in a split stance rather than on one line as if you were on a tight rope. This will make you more balanced. Watch out for your front heal lifting up off the floor, try to keep your heel down and push up out of your heel to return to the standing position. Aim to keep an upright spine.",
@@ -54,6 +74,7 @@
   },
   {
     "name": "Reach ups",
+    "type": "exercise",
     "difficulty": "medium",
     "target": ["abs", "lower back"],
     "instructions": "Lay down on a mat or a towel on a flat surface. Draw your legs in by bending your knees to 90 degrees. Reach up above your shoulders with your arms. From this start position, draw your belly button down towards the floor to engage your core, then contract your stomach muscles (abs) to raise up to a crunch position and reach your arms up as high as possible. Then lower back down to the floor and repeat. Keep your feet on the floor through out the movement and avoid the temptation to put your feet under something or asking a buddy to anchor your feet so that you can use your legs to help pull you up through the sitting up phase.",
@@ -61,6 +82,7 @@
   },
   {
     "name": "Sit up",
+    "type": "exercise",
     "difficulty": "medium",
     "target": ["abs"],
     "instructions": "Lay down on a mat or a towel on a flat surface. Draw your legs in by bending your knees to 90 degrees. Place your hands by your ears and take your elbows out wide. From this start position, draw your belly button down towards the floor to engage your core, then contract your stomach muscles (abs) to raise up to a sitting position. Keep your feet on the floor through out the movement and avoid the temptation to put your feet under something or asking a buddy to anchor your feet. Another common mistake is to use your arms to pull the back of your head up, make sure you don’t do this otherwise you may strain your neck.",
@@ -68,6 +90,7 @@
   },
   {
     "name": "In and out abs",
+    "type": "exercise",
     "difficulty": "hard",
     "target": ["abs", "lower back", "quadriceps"],
     "instructions": "In this advanced core exercise, start off seating upright on the floor with your legs bent in front of you. Then, keeping a straight back, lift your hands off the floor, and pick your feet up as your draw your knees into your chest. This is the “In” position of the exercise, during which you are contracting your abs and hip flexors to hold at the top. From here, lean back with a straight spine and straighten your legs out in front of you to act as a counter balance to offset the weight of your upper body. Keep your abs contracted to support your lower back and tuck your chin in as you lean back. Just before your shoulder blades touch the floor, stop leaning back and hold this “Out” position. Then lift your upper body back up away from the floor and draw your knees in towards your chest to return to the “In” position. Repeat this “In Out” movement with control for the duration of the exercise. If you feel strain in your lower back, stop and try some of the regression exercises.",
@@ -75,6 +98,7 @@
   },
   {
     "name": "Swimmer",
+    "type": "exercise",
     "difficulty": "medium",
     "target": [
       "abs",
@@ -89,6 +113,7 @@
   },
   {
     "name": "Superman",
+    "type": "exercise",
     "difficulty": "easy",
     "target": ["upper back", "lower back", "shoulders", "glutes", "hamstrings"],
     "instructions": "Start by laying down on your front with both arms stretching out on the floor above your head, palms down (imagine you are flying like superman). Then push your hips down into the floor, and lift your arms and legs up away from the floor. To do this you will need to contract the muscles down the back of your body, so squeeze the backs of your shoulders, your upper back and lower back muscles, your glutes, and lift your legs by contracting your hamstrings and calves. Hold this position for the duration of the exercise. Aim to lift your hands and feet up to the same height off the floor to create a nice even curve through the back of your body. Avoid over-lifting the legs as this can put pressure on your lower back.",
@@ -96,6 +121,7 @@
   },
   {
     "name": "Laying back extension",
+    "type": "exercise",
     "difficulty": "easy",
     "target": ["abs", "upper back", "lower back", "glutes"],
     "instructions": "Start by lying on the floor with your face down and your hands by your head, elbows wide. Keep your feet on the floor, and engage your glutes and core to support your lower back. Then activate your back muscles all the way along the length of your spine to lift your shoulders, head and chest up away from the floor and hold this top position for the required duration. Aim to squeeze your shoulder blades together on your back by contracting your upper back muscles. Also avoid lifting your chin up to look forward, instead keep your chin slightly tucked and look down on the floor just in front of you.",
@@ -103,6 +129,7 @@
   },
   {
     "name": "Push up",
+    "type": "exercise",
     "difficulty": "easy",
     "target": ["abs", "upper back", "chest", "shoulders"],
     "instructions": "Start at the top of the push up position with your hands on the floor, arms straight and underneath your shoulders. Step your feet back behind you and lift your knees. Engage your glutes, tense your legs and brace your core to keep your body rigid. Keeping your elbows in towards your ribs and your forearms vertical, bend at the elbows to lower your body towards the floor. Your head and shoulders should move forwards of your hands as you get closer to the floor. Use your full range of motion to lower your chest in between your hands, as close to the floor as you can, then push your hands into the floor, keeping you body tensed, to move it up away from the floor back to the start position. Watch out for elbows flaring out to the sides away from your ribs. They should always point back towards your feet. Another common mistake is to lower down without moving your head and shoulders forward of your hands. These mistakes can lead to injury so focus on quality of movement rather than quantity. If you can’t maintain quality in this movement, try some of the easier versions of this exercise to build up strength and technique first. How to make Push-ups easier",
@@ -110,6 +137,7 @@
   },
   {
     "name": "Alternating push up plank",
+    "type": "exercise",
     "difficulty": "medium",
     "target": ["abs", "triceps", "upper back", "shoulders"],
     "instructions": "Start at the top of the push up position with your hands on the floor, arms straight and underneath your shoulders. Step your feet back behind you and lift your knees. Engage your glutes, tense your legs and brace your core to keep your body rigid. From the top position, pick up your left hand and lower down on to your left elbow and forearm by placing your elbow directly under your shoulder. Repeat this for your right arm, until you are in an elbow plank position. Keep your body strong and firm through the movement and avoid letting your hips sag or stick up. Imagine a straight line running from the crown of your head down to your feet. From the bottom position (plank) pick up your left arm and place your left hand on the floor underneath your left shoulder. Push down into your left hand to lift your body up away from the floor and at the same time, pick up your right hand and place it on the floor underneath your right shoulder to return you to the start position. Repeat the entire lowering to plank and pressing back to push-up position, but start with your right arm this time to lower first and push-up first. Change arms every time you complete a full up and down cycle.",
@@ -117,6 +145,7 @@
   },
   {
     "name": "Push up and rotation",
+    "type": "exercise",
     "difficulty": "hard",
     "target": ["abs", "triceps", "chest", "shoulders"],
     "instructions": "Start at the top of the push up position with your hands on the floor, arms straight and underneath your shoulders. Step your feet back behind you and lift your knees. Engage your glutes, tense your legs and brace your core to keep your body rigid. Keeping your elbows in towards your ribs and your forearms vertical, bend at the elbows to lower your body towards the floor. Your head and shoulders should move forwards of your hands as you get closer to the floor. Use your full range of motion to lower your chest in between your hands, as close to the floor as you can, then push your hands into the floor, keeping you body tensed, to move it up away from the floor back towards the start position. As you get to the top of the push up, shift your weight onto your left hand and lift your right arm up, rotating through the spine and shoulders into a side plank position with your arms. Place your right hand back on the floor under your right shoulder, then lower into your next push-up. As you return to the top of this push-up, shift your weight on to your right hand and lift your left arm up into a side plank. Keep going with this push-up, side plank movement, alternating sides in between each push-up.",
@@ -124,6 +153,7 @@
   },
   {
     "name": "Scissor kicks",
+    "type": "exercise",
     "difficulty": "medium",
     "target": ["abs", "lower back", "quadriceps"],
     "instructions": "Start off lying down on your back with your arms by your sides, palms down pushing into the floor for support. Brace your abs and keep your lower back flat against the floor. From here, lift both legs up to about a 45 degree angle from the floor, keeping them as straight as you can. Then, with control, lower one leg towards the floor as you lift the other leg up over your hips, as if your legs are the open blades of a pair of scissors. Slowly switch legs up and down in a scissor motion for the duration of the exercise. If you find your lower back arches away from the floor during this exercise, you will need to work through some easier lower abdominal exercises to build up core stability first.",
@@ -131,6 +161,7 @@
   },
   {
     "name": "Snow angel",
+    "type": "exercise",
     "difficulty": "hard",
     "target": ["abs", "lower back", "shoulders", "glutes", "quadriceps"],
     "instructions": "Start by lying on your back with your legs flat on the floor and your arms down by your sides. Keep your lower back against the floor by engaging your stomach muscles. Then hover your feet just off the floor and sweep them out to the sides, staying close to the floor. At the same time sweep your arms out from your sides in a circle, close to the floor, until they are over your head. Then return your arms to your sides and your feet back to the centre at the same time. Keep moving the arms and legs together as if you are making a snow angel except that your limbs are not touching the floor.",
@@ -138,6 +169,7 @@
   },
   {
     "name": "Supine bicycle",
+    "type": "exercise",
     "difficulty": "medium",
     "target": ["abs", "lower back"],
     "instructions": "Start laying on your back on a mat or a towel. Bring your hands up by your ears and take your elbows out wide. Then elevate your feet off the floor with a 90 degree bend at your hips and your knees. You want your thighs to be vertical and your shins to be parallel to the floor. Then, keeping your lower back pressed down into the floor, tuck your chin to your chest, draw your belly button down and contract your abdominals to roll your upper spine up off the floor. This is the start position. From here, twist your spine to bring your right shoulder and elbow in towards your left knee. At the same time, extend your right leg out as straight as you can and hover it just off the floor. Keep your lower back in contact with the floor. Return to the start position by bringing your right leg back in next to your left leg as you untwist your spine to return your upper body to the top of the crunch position. Then repeat the process for the other side, by twisting your upper body to bring your left shoulder in towards your right knee as you reach your left leg out straight to hover, before returning to the start position. This is one complete cycle through the movement, so repeat this full cycle for the duration of the exercise. A common mistake with Supine Bicycle is to not lift your shoulder blades up off the floor into your crunch position. The other mistake is to not twist your spine and instead just move your elbows in and out at the shoulder joint like wings. We actually want the elbows to stay out wide and for the rotation to occur in the spine.",
@@ -145,6 +177,7 @@
   },
   {
     "name": "Squats",
+    "type": "exercise",
     "difficulty": "easy",
     "target": ["calves", "glutes", "quadriceps"],
     "instructions": "Start with your feet shoulder width apart on a flat level surface. This will be your starting position. Begin the movement by sitting your hips back, bending your knees and push them out to the sides a little, whilst keeping you head looking forwards at eye height and your chest up. Your heels should stay in contact with the floor and your weight should be centered, mid-foot. Continue down until your hips are level with your knees and your thighs are parallel (or as low to this as your mobility will allow). At the same time, raise your arms out straight in front of you to shoulder height. This helps offset the weight of your hips sitting back behind you. This is the bottom of the squat, and quickly reverse the motion until you return to the starting position. As you squat, keep your head and chest up and push your knees out.",
@@ -152,6 +185,7 @@
   },
   {
     "name": "Frog jumps",
+    "type": "exercise",
     "difficulty": "hard",
     "target": ["calves", "glutes", "quadriceps"],
     "instructions": "Start in a standing position with your feet at shoulder width. Then lower down into a 3/4 squat position with your arms at your sides. Pause here for a second and get ready to explosively jump up and forwards about 2 feet. Jump up and land about 2 feet in front of your start position. As you land back down, absorb the landing by bending your knees and sitting back into your hips. Continue this to lower down to the bottom position ready for your next jump, except this time you are going to jump backwards about 2 feet and land back where you started. Keep the forward / backwards jumps going in a continuous cycle for the duration of the exercise.",
@@ -159,6 +193,7 @@
   },
   {
     "name": "Wall sit",
+    "type": "exercise",
     "difficulty": "medium",
     "target": ["calves", "glutes", "quadriceps"],
     "instructions": "You will need a strong, smooth wall to lean against for this exercise. Standing with your back up against the wall, take a small step away from the wall with both feet so that, if you squat down and back until your thighs are parallel to the floor, your hips and back touch the wall. Once you have squatted down against the wall, make sure your ankles are below or slightly in front of your knees and your feet are flat to the floor. Lift your arms up forwards to shoulder height and hold this seated position for the duration of the exercise. This is an isometric exercise for upper legs and glutes. If you have history of knee pain or injury or if this exercise causes pain in the knee joints, don’t do it.",
@@ -166,6 +201,7 @@
   },
   {
     "name": "Plank pose",
+    "type": "exercise",
     "difficulty": "medium",
     "target": ["abs", "triceps", "shoulders"],
     "instructions": "Start off on your hands and knees. Activate your core by pulling the belly button to the spine. Tuck your toes and lift your knees off the floor. Make a straight line with your body from your shoulders through your hips to your heels. Press the back of your shoulders blades up to the ceiling, doming slightly the upper back. Tuck your coccyx (tailbone) slightly toward the chest. Gaze slightly in front. Common mistakes are to either have the hips high in the air or to let the hip sag downwards. Instead ensure a straight line from head to heels. Also avoid hanging the head looking back to the toes, ensuring gaze is forward.",
@@ -173,6 +209,7 @@
   },
   {
     "name": "Mountain climbers",
+    "type": "exercise",
     "difficulty": "medium",
     "target": ["abs", "glutes", "hamstrings", "quadriceps"],
     "instructions": "Start off with your hands on the floor, your arms straight and your legs straight out behind you, feet on the floor, like you just finished a push up. Then step one foot in underneath your chest and rest it there on the floor. This is your start position. Then, keeping your shoulders lined up above your hands, push down into the floor with your hands and jump switch your feet so that the one that was tucked underneath you straightens out behind you and visa versa. As soon as your feet land in one position, jump switch them back to the other position and keep alternating as fast as you can for the duration of the exercise. A common mistake is to let your shoulders go back towards your feet and your hips stick up in the air. Aim to keep shoulders above your hands and your hips at the same height as your shoulders.",
@@ -180,6 +217,7 @@
   },
   {
     "name": "Chase the rabbit",
+    "type": "exercise",
     "difficulty": "medium",
     "target": [
       "abs",
@@ -194,6 +232,7 @@
   },
   {
     "name": "Plank",
+    "type": "exercise",
     "difficulty": "easy",
     "target": ["abs", "lower back", "shoulders", "glutes"],
     "instructions": "Start off in a crawling position on your hands and knees. Pick up one hand, bend it at the elbow and place your elbow on the floor directly underneath your shoulder. Repeat for the other hand so that you are resting your upper body on your elbows. Then walk your knees back out behind you, tuck your toes and pick your knees up off the floor into Plank position. Make your body as rigid as you can from your feet to your head to keep it in a straight “plank-like” shape side on. Do this by tensing your quads to lift your knee caps up your thighs, squeezing your glutes together, bracing your core and drawing your belly button up away from the floor, whilst at the same time pressing down into the floor with your elbows. Keep your neck in a neutral position, aligned with the rest of your spine, by looking at the floor just in front of your hands. Common faults with Plank are to have your hips up too high or too low, to drop your head so you are looking back towards your toes, or to not have enough tension in the upper body such that your chest slumps down in between your shoulders.",
@@ -201,6 +240,7 @@
   },
   {
     "name": "Plank jacks",
+    "type": "exercise",
     "difficulty": "medium",
     "target": [
       "abs",
@@ -215,6 +255,7 @@
   },
   {
     "name": "Plank crunch and kickback right",
+    "type": "exercise",
     "difficulty": "hard",
     "target": [
       "abs",
