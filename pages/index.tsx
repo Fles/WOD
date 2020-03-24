@@ -7,18 +7,16 @@ import { makeTraining } from '../tools/makeTraining'
 import { Exercise } from '../types'
 
 const Index = ({ exercises }) => {
-  const [current, setCurrent] = useState(0)
   const [isActive, setIsActive] = useState(true)
-  const [seconds, setSeconds] = useState(exercises[current].time)
-  const next = current + 1
+  const [current, setCurrent] = useState(0)
   const currentExercise: Exercise = exercises[current]
-  const nextExercise: Exercise = exercises[next]
-
-  const normalizeExerciseTime = value =>
-    100 - ((value - 1) * 100) / (currentExercise.time - 1)
+  const nextExercise: Exercise = exercises[current + 1]
+  const [seconds, setSeconds] = useState(currentExercise.time)
 
   const normalizeTrainingTime = current =>
     ((current - 0) * 100) / (exercises.length - 0)
+  const normalizeExerciseTime = value =>
+    100 - ((value - 1) * 100) / (currentExercise.time - 1)
 
   function toggle() {
     setIsActive(!isActive)
@@ -29,7 +27,7 @@ const Index = ({ exercises }) => {
   }
   function startNext() {
     setSeconds(nextExercise.time)
-    setCurrent(next)
+    setCurrent(current + 1)
   }
 
   React.useEffect(() => {
@@ -47,7 +45,10 @@ const Index = ({ exercises }) => {
 
   return (
     <div>
-      <LinearProgress variant="buffer" value={normalizeTrainingTime(current)} />
+      <LinearProgress
+        variant="determinate"
+        value={normalizeTrainingTime(current)}
+      />
       <Grid container spacing={2} justify="center" alignItems="center">
         <Grid item xs={9}>
           <Paper>
@@ -57,7 +58,7 @@ const Index = ({ exercises }) => {
               progress={seconds}
             />
             <LinearProgress
-              variant="buffer"
+              variant="determinate"
               value={normalizeExerciseTime(seconds)}
             />
           </Paper>
@@ -77,7 +78,7 @@ const Index = ({ exercises }) => {
 Index.getInitialProps = async function() {
   const exercises = await require('../public/exercises.json')
   return {
-    exercises: makeTraining(exercises, 1, 2, 1),
+    exercises: makeTraining(exercises, 10, 45, 10),
   }
 }
 

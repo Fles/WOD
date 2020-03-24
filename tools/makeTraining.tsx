@@ -12,7 +12,7 @@ export const addPrepare = (exercises, time) => {
   return exercises
 }
 
-export const addRests = (exercises, time) =>
+export const addRestAfterRach = (exercises, time) =>
   exercises.reduce(
     (_, exercise) =>
       _.concat(exercise, {
@@ -32,6 +32,6 @@ export const makeTraining = (
   rest_time
 ) =>
   addPrepare(
-    addRests(addTimeToExercises(exercises, exercise_time), rest_time),
+    addRestAfterRach(addTimeToExercises(exercises, exercise_time), rest_time),
     prepare_time
   )

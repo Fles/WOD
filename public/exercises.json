@@ -15,21 +15,6 @@
     "media": "high-knee"
   },
   {
-    "name": "Fast feet",
-    "type": "exercise",
-    "difficulty": "medium",
-    "target": ["calves", "glutes", "quadriceps"],
-    "instructions": "With your feet at hips width, lower your body down into a half squat position and reach out with your arms in front of you. Lift up your heels so you are on the balls of your feet. Hold this body position, then start running as fast as you can on the spot. Stay low as your run and feel the burn in your quads.",
-    "media": "fast-feet"
-  },
-  {
-    "name": "High knees",
-    "difficulty": "medium",
-    "target": ["abs", "calves", "glutes", "hamstrings", "quadriceps"],
-    "instructions": "From a standing start, with your arms held out in front of you at shoulder height, start running on the spot as fast as you can by lifting your knees up to waist height for each stride. Stay up on your toes and keep your back upright and straight, avoid leaning backwards and keep your arms as still as possible.",
-    "media": "high-knee"
-  },
-  {
     "name": "Burpees",
     "type": "exercise",
     "difficulty": "hard",
