@@ -1,4 +1,5 @@
 import React from 'react'
+import clsx from 'clsx'
 import Card from '@material-ui/core/Card'
 import CardHeader from '@material-ui/core/CardHeader'
 import CardMedia from '@material-ui/core/CardMedia'
@@ -11,9 +12,9 @@ import Collapse from '@material-ui/core/Collapse'
 import CardContent from '@material-ui/core/CardContent'
 import CardActions from '@material-ui/core/CardActions'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-import clsx from 'clsx'
 import { makeStyles } from '@material-ui/core/styles'
 import { green, red, orange } from '@material-ui/core/colors'
+import { Exercise } from '../types'
 
 const useStyles = makeStyles(theme => ({
   expand: {
@@ -52,13 +53,11 @@ export default function ExerciseCard({
   progress,
   instructions = '',
   target = [],
-  difficulty = '',
+  difficulty = 'easy',
   type,
-}) {
+}: Exercise): JSX.Element {
   const classes = useStyles()
   const [expanded, setExpanded] = React.useState(false)
-
-  const normalise = value => ((value - 1) * 100) / (time - 0)
 
   const handleExpandClick = () => {
     setExpanded(!expanded)
@@ -81,11 +80,7 @@ export default function ExerciseCard({
     <Card>
       <CardHeader
         avatar={
-          <Avatar
-            className={classes[avatarColor(type)]}
-            aria-label="progress"
-            variant="square"
-          >
+          <Avatar className={classes[avatarColor(type)]} aria-label="progress">
             <span className={classes.avatarText}>{progress || time}'</span>
           </Avatar>
         }
