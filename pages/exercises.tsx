@@ -7,23 +7,16 @@ import ListSubheader from '@material-ui/core/ListSubheader'
 import IconButton from '@material-ui/core/IconButton'
 import InfoIcon from '@material-ui/icons/Info'
 import CardMedia from '@material-ui/core/CardMedia'
-import ExerciseCardSmall from '../ui/ExerciseCardSmall'
+import Paper from '@material-ui/core/Paper'
+import ExerciseThumb from '../ui/ExerciseThumb'
+import { Grid } from '@material-ui/core'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      display: 'flex',
-      flexWrap: 'wrap',
-      justifyContent: 'space-around',
-      overflow: 'hidden',
-      backgroundColor: theme.palette.background.paper,
+      flexGrow: 1,
     },
-    gridList: {
-      width: '100%',
-      height: '100%',
-      paddingLeft: 350,
-      paddingRight: 350,
-    },
+    grid: {},
     icon: {
       color: 'rgba(255, 255, 255, 0.54)',
     },
@@ -33,7 +26,7 @@ const useStyles = makeStyles((theme: Theme) =>
 const Exercises = ({ exercises }) => {
   const classes = useStyles()
   const [sequence, setSequence] = useState([])
-  console.log(sequence)
+
   const addItem = name => {
     if (!sequence.includes(name)) {
       setSequence([...sequence, name])
@@ -48,14 +41,14 @@ const Exercises = ({ exercises }) => {
 
   return (
     <div className={classes.root}>
-      <GridList cellHeight={280} className={classes.gridList}>
+      <GridList cellHeight={280} className={classes.grid}>
         {exercises.map(exe => (
-          <ExerciseCardSmall
+          <ExerciseThumb
             {...exe}
             key={exe.name}
             addItem={addItem}
             position={sequence.indexOf(exe.name) + 1}
-          ></ExerciseCardSmall>
+          />
         ))}
       </GridList>
     </div>
