@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Theme, createStyles, makeStyles } from '@material-ui/core/styles'
 import GridList from '@material-ui/core/GridList'
 import GridListTile from '@material-ui/core/GridListTile'
@@ -7,6 +7,7 @@ import ListSubheader from '@material-ui/core/ListSubheader'
 import IconButton from '@material-ui/core/IconButton'
 import InfoIcon from '@material-ui/icons/Info'
 import CardMedia from '@material-ui/core/CardMedia'
+import ExerciseCardSmall from '../ui/ExerciseCardSmall'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -31,32 +32,30 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const Exercises = ({ exercises }) => {
   const classes = useStyles()
+  const [sequence, setSequence] = useState([])
+  console.log(sequence)
+  const addItem = name => {
+    if (!sequence.includes(name)) {
+      setSequence([...sequence, name])
+    } else {
+      setSequence(
+        [...sequence].filter(function(item) {
+          return item !== name
+        })
+      )
+    }
+  }
 
   return (
     <div className={classes.root}>
       <GridList cellHeight={280} className={classes.gridList}>
-        {exercises.map(tile => (
-          <GridListTile key={tile.media}>
-            <GridListTileBar
-              title={tile.name}
-              subtitle={<span>{tile.target.join(', ')}</span>}
-              actionIcon={
-                <IconButton
-                  aria-label={`info about ${tile.name}`}
-                  className={classes.icon}
-                >
-                  {tile.difficulty}
-                </IconButton>
-              }
-            />
-            <CardMedia
-              component="video"
-              image={`/images/${tile.media}.mp4`}
-              title={tile.name}
-              autoPlay={true}
-              loop={true}
-            />
-          </GridListTile>
+        {exercises.map(exe => (
+          <ExerciseCardSmall
+            {...exe}
+            key={exe.name}
+            addItem={addItem}
+            position={sequence.indexOf(exe.name) + 1}
+          ></ExerciseCardSmall>
         ))}
       </GridList>
     </div>
