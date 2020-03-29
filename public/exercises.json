@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "name": "Fast feet",
     "type": "exercise",
     "difficulty": "medium",
@@ -8,6 +9,7 @@
     "media": "fast-feet"
   },
   {
+    "id": 2,
     "name": "High knees",
     "difficulty": "medium",
     "target": ["abs", "calves", "glutes", "hamstrings", "quadriceps"],
@@ -15,6 +17,7 @@
     "media": "high-knee"
   },
   {
+    "id": 3,
     "name": "Burpees",
     "type": "exercise",
     "difficulty": "hard",
@@ -34,6 +37,7 @@
     "media": "burpee"
   },
   {
+    "id": 4,
     "name": "Forward lunges",
     "type": "exercise",
     "difficulty": "medium",
@@ -42,6 +46,7 @@
     "media": "forward-lunge"
   },
   {
+    "id": 5,
     "name": "Rear lunges",
     "type": "exercise",
     "difficulty": "medium",
@@ -50,6 +55,7 @@
     "media": "rear-lunge"
   },
   {
+    "id": 6,
     "name": "Iron mike",
     "type": "exercise",
     "difficulty": "hard",
@@ -58,6 +64,7 @@
     "media": "iron-mike"
   },
   {
+    "id": 7,
     "name": "Reach ups",
     "type": "exercise",
     "difficulty": "medium",
@@ -66,6 +73,7 @@
     "media": "reach-up"
   },
   {
+    "id": 8,
     "name": "Sit up",
     "type": "exercise",
     "difficulty": "medium",
@@ -74,6 +82,7 @@
     "media": "sit-up"
   },
   {
+    "id": 9,
     "name": "In and out abs",
     "type": "exercise",
     "difficulty": "hard",
@@ -82,6 +91,7 @@
     "media": "in-and-out-ab"
   },
   {
+    "id": 10,
     "name": "Swimmer",
     "type": "exercise",
     "difficulty": "medium",
@@ -97,6 +107,7 @@
     "media": "swimmer"
   },
   {
+    "id": 11,
     "name": "Superman",
     "type": "exercise",
     "difficulty": "easy",
@@ -105,6 +116,7 @@
     "media": "superman"
   },
   {
+    "id": 12,
     "name": "Laying back extension",
     "type": "exercise",
     "difficulty": "easy",
@@ -113,6 +125,7 @@
     "media": "laying-back-extension"
   },
   {
+    "id": 13,
     "name": "Push up",
     "type": "exercise",
     "difficulty": "easy",
@@ -121,6 +134,7 @@
     "media": "push-up"
   },
   {
+    "id": 14,
     "name": "Alternating push up plank",
     "type": "exercise",
     "difficulty": "medium",
@@ -129,6 +143,7 @@
     "media": "alternating-push-up-plank"
   },
   {
+    "id": 15,
     "name": "Push up and rotation",
     "type": "exercise",
     "difficulty": "hard",
@@ -137,6 +152,7 @@
     "media": "push-up-and-rotation"
   },
   {
+    "id": 16,
     "name": "Scissor kicks",
     "type": "exercise",
     "difficulty": "medium",
@@ -145,6 +161,7 @@
     "media": "scissor-kick"
   },
   {
+    "id": 17,
     "name": "Snow angel",
     "type": "exercise",
     "difficulty": "hard",
@@ -153,6 +170,7 @@
     "media": "snow-angel"
   },
   {
+    "id": 18,
     "name": "Supine bicycle",
     "type": "exercise",
     "difficulty": "medium",
@@ -161,6 +179,7 @@
     "media": "supine-bicycle"
   },
   {
+    "id": 19,
     "name": "Squats",
     "type": "exercise",
     "difficulty": "easy",
@@ -169,6 +188,7 @@
     "media": "squat"
   },
   {
+    "id": 20,
     "name": "Frog jumps",
     "type": "exercise",
     "difficulty": "hard",
@@ -177,6 +197,7 @@
     "media": "frog-jump"
   },
   {
+    "id": 21,
     "name": "Wall sit",
     "type": "exercise",
     "difficulty": "medium",
@@ -185,6 +206,7 @@
     "media": "wall-sit"
   },
   {
+    "id": 22,
     "name": "Plank pose",
     "type": "exercise",
     "difficulty": "medium",
@@ -193,6 +215,7 @@
     "media": "plank-pose"
   },
   {
+    "id": 23,
     "name": "Mountain climbers",
     "type": "exercise",
     "difficulty": "medium",
@@ -201,6 +224,7 @@
     "media": "mountain-climber"
   },
   {
+    "id": 24,
     "name": "Chase the rabbit",
     "type": "exercise",
     "difficulty": "medium",
@@ -216,6 +240,7 @@
     "media": "chase-the-rabbit"
   },
   {
+    "id": 25,
     "name": "Plank",
     "type": "exercise",
     "difficulty": "easy",
@@ -224,6 +249,7 @@
     "media": "plank"
   },
   {
+    "id": 26,
     "name": "Plank jacks",
     "type": "exercise",
     "difficulty": "medium",
@@ -239,6 +265,7 @@
     "media": "plank-jack"
   },
   {
+    "id": 27,
     "name": "Plank crunch and kickback right",
     "type": "exercise",
     "difficulty": "hard",

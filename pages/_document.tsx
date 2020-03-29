@@ -67,8 +67,7 @@ MyDocument.getInitialProps = async ctx => {
     ...initialProps,
     styles: [
       <React.Fragment key="styles">
-        {' '}
-        {initialProps.styles} {sheets.getStyleElement()}{' '}
+        {initialProps.styles} {sheets.getStyleElement()}
       </React.Fragment>,
     ],
   }

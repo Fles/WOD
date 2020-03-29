@@ -7,6 +7,8 @@ import IconButton from '@material-ui/core/IconButton'
 import Typography from '@material-ui/core/Typography'
 import { green } from '@material-ui/core/colors'
 import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked'
+import { useContext } from 'react'
+import WodContext from '../components/WodContext'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -32,23 +34,24 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-export default function ExerciseThumb({
-  media,
-  name,
-  difficulty,
-  addItem,
-  position,
-}) {
+export default function ExerciseThumb({ id, media, name, difficulty }) {
   const classes = useStyles()
+  const { sequence, add, remove, find } = useContext(WodContext)
+  const position = find(id) + 1
+  const inSequence = position > 0
 
   return (
-    <Card className={classes.root} onClick={_ => addItem(name)} key={name}>
+    <Card
+      key={name}
+      className={classes.root}
+      onClick={() => (inSequence ? remove(id) : add(id))}
+    >
       <IconButton aria-label="icon" className={classes.positionIcon}>
         <Avatar
           aria-label="position"
-          className={position ? classes.avatar : null}
+          className={inSequence ? classes.avatar : null}
         >
-          {position !== 0 ? position : <RadioButtonUncheckedIcon />}
+          {inSequence ? position : <RadioButtonUncheckedIcon />}
         </Avatar>
       </IconButton>
       <CardMedia

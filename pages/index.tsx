@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
-import ExerciseCard from '../ui/ExerciseCard'
+import ExerciseCard from '../components/ExerciseCard'
 import LinearProgress from '@material-ui/core/LinearProgress'
 import { makeTraining } from '../tools/makeTraining'
 import { Exercise } from '../types'
