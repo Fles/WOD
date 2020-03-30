@@ -17,6 +17,9 @@ import { green, red, orange } from '@material-ui/core/colors'
 import { Exercise } from '../types'
 
 const useStyles = makeStyles(theme => ({
+  card: {
+    marginTop: 25,
+  },
   expand: {
     transform: 'rotate(0deg)',
     marginLeft: 'auto',
@@ -77,7 +80,7 @@ export default function ExerciseCard({
   }
 
   return (
-    <Card>
+    <Card className={classes.card}>
       <CardHeader
         avatar={
           <Avatar className={classes[avatarColor(type)]} aria-label="progress">
@@ -86,7 +89,7 @@ export default function ExerciseCard({
         }
         action={
           <IconButton aria-label="add to favorites">
-            <FavoriteIcon />
+            {/* <FavoriteIcon /> */}
           </IconButton>
         }
         title={<h3>{name}</h3>}

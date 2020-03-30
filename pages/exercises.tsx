@@ -10,7 +10,7 @@ import InfoIcon from '@material-ui/icons/Info'
 import CardMedia from '@material-ui/core/CardMedia'
 import Paper from '@material-ui/core/Paper'
 import ExerciseThumb from '../components/ExerciseThumb'
-import { Grid } from '@material-ui/core'
+import { Grid, Button } from '@material-ui/core'
 import { Exercise } from '../types'
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -30,7 +30,21 @@ const Exercises = ({ exercises }) => {
 
   return (
     <div className={classes.root}>
-      <button onClick={() => Router.push('/')}>START</button>
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={() => Router.push('/')}
+      >
+        Back
+      </Button>
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={() => Router.push('/start')}
+      >
+        Start
+      </Button>
+
       <GridList cellHeight={280} className={classes.grid}>
         {exercises.map((exe: Exercise) => (
           <ExerciseThumb {...exe} key={exe.name} />

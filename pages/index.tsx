@@ -1,117 +1,136 @@
-import React, { useState } from 'react'
+import React from 'react'
+import AppBar from '@material-ui/core/AppBar'
+import Button from '@material-ui/core/Button'
+import CameraIcon from '@material-ui/icons/PhotoCamera'
+import Card from '@material-ui/core/Card'
+import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
+import CardMedia from '@material-ui/core/CardMedia'
+import CssBaseline from '@material-ui/core/CssBaseline'
 import Grid from '@material-ui/core/Grid'
-import Paper from '@material-ui/core/Paper'
-import ExerciseCard from '../components/ExerciseCard'
-import LinearProgress from '@material-ui/core/LinearProgress'
-import { makeTraining } from '../tools/makeTraining'
-import { Exercise } from '../types'
-import { useContext } from 'react'
-import WodContext from '../components/WodContext'
-import { beep } from '../tools/beep'
+import Toolbar from '@material-ui/core/Toolbar'
+import Typography from '@material-ui/core/Typography'
+import { makeStyles } from '@material-ui/core/styles'
+import Container from '@material-ui/core/Container'
+import Link from '@material-ui/core/Link'
+import { Stepper, Step, StepContent, StepLabel } from '@material-ui/core'
+import Router from 'next/router'
 
-const Index = props => {
-  const { sequence } = useContext(WodContext)
-
-  const PREP_TIME = 10
-  const EXEC_TIME = 45
-  const REST_TIME = 15
-
-  const sortedExercises = sequence.map(id =>
-    props.exercises.find(exe => id === exe.id)
+function Copyright() {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {'Copyright © '}
+      <Link color="inherit" href="https://material-ui.com/">
+        Your Website
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
   )
+}
 
-  const training = makeTraining(
-    sortedExercises,
-    PREP_TIME,
-    EXEC_TIME,
-    REST_TIME
-  )
+const useStyles = makeStyles(theme => ({
+  icon: {
+    marginRight: theme.spacing(2),
+  },
+  heroContent: {
+    backgroundColor: theme.palette.background.paper,
+    padding: theme.spacing(8, 0, 6),
+  },
+  heroButtons: {
+    marginTop: theme.spacing(4),
+  },
+  cardGrid: {
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8),
+  },
+  card: {
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  cardMedia: {
+    paddingTop: '56.25%', // 16:9
+  },
+  cardContent: {
+    flexGrow: 1,
+  },
+  footer: {
+    backgroundColor: theme.palette.background.paper,
+    padding: theme.spacing(6),
+  },
+}))
 
-  const [isActive, setIsActive] = useState(true)
-  const [current, setCurrent] = useState(0)
-
-  const currentExercise: Exercise = training[current]
-  const nextExercise: Exercise = training[current + 1]
-
-  const [seconds, setSeconds] = useState(currentExercise.time)
-
-  const normalizeTrainingTime = current =>
-    ((current - 0) * 100) / (training.length - 0)
-  const normalizeExerciseTime = value =>
-    100 - ((value - 1) * 100) / (currentExercise.time - 1)
-
-  function toggle() {
-    setIsActive(!isActive)
-  }
-  function reset(time) {
-    setSeconds(time)
-    setIsActive(false)
-  }
-  function startNext() {
-    setSeconds(nextExercise.time)
-    setCurrent(current + 1)
-  }
-
-  React.useEffect(() => {
-    const audioCtx = new AudioContext()
-
-    if (seconds === 2 || seconds === 1) {
-      beep(50, 700, 10, audioCtx)
-    }
-
-    if (seconds === 0) {
-      beep(80, 1000, 40, audioCtx)
-    }
-
-    let interval = null
-    if (isActive) {
-      interval = setInterval(() => {
-        seconds >= 0 && setSeconds(seconds => seconds - 1)
-      }, 1000)
-    }
-    if (seconds === 0 && nextExercise) startNext()
-
-    return () => clearInterval(interval)
-  }, [isActive, seconds])
+export default function Index() {
+  const classes = useStyles()
 
   return (
-    <div>
-      <LinearProgress
-        variant="determinate"
-        value={normalizeTrainingTime(current)}
-      />
-      <Grid container spacing={2} justify="center" alignItems="center">
-        <Grid item xs={9}>
-          <Paper>
-            <ExerciseCard
-              {...currentExercise}
-              key={currentExercise.name}
-              progress={seconds}
-            />
-            <LinearProgress
-              variant="determinate"
-              value={normalizeExerciseTime(seconds)}
-            />
-          </Paper>
-        </Grid>
-        {nextExercise ? (
-          <Grid item xs={3}>
-            <Paper>
-              <ExerciseCard {...nextExercise} key={nextExercise.name} />
-            </Paper>
-          </Grid>
-        ) : null}
-      </Grid>
-    </div>
+    <React.Fragment>
+      <CssBaseline />
+
+      <main>
+        {/* Hero unit */}
+        <div className={classes.heroContent}>
+          <Container maxWidth="sm">
+            <Typography
+              component="h1"
+              variant="h2"
+              align="center"
+              color="textPrimary"
+              gutterBottom
+            >
+              WOD
+            </Typography>
+            <Typography
+              variant="h5"
+              align="center"
+              color="textSecondary"
+              paragraph
+            >
+              Functional training made easy
+            </Typography>
+            <div className={classes.heroButtons}>
+              <Grid container spacing={2} justify="center">
+                <Grid item>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    onClick={() => Router.push('/start')}
+                  >
+                    Start
+                  </Button>
+                </Grid>
+                <Grid item>
+                  <Button
+                    variant="outlined"
+                    color="primary"
+                    onClick={() => Router.push('/exercises')}
+                  >
+                    Edit training
+                  </Button>
+                </Grid>
+              </Grid>
+            </div>
+          </Container>
+        </div>
+      </main>
+
+      {/* Footer */}
+      <footer className={classes.footer}>
+        <Typography variant="h6" align="center" gutterBottom>
+          Footer
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          align="center"
+          color="textSecondary"
+          component="p"
+        >
+          Something here to give the footer a purpose!
+        </Typography>
+        <Copyright />
+      </footer>
+      {/* End footer */}
+    </React.Fragment>
   )
 }
-
-Index.getInitialProps = async function(c) {
-  const exercises = await require('../public/exercises.json')
-
-  return {
-    exercises,
-  }
-}
-
-export default Index
