@@ -118,7 +118,7 @@ export default function Index() {
       {/* Footer */}
       <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
-          Footer
+          Change is in you!
         </Typography>
         <Typography
           variant="subtitle1"
@@ -126,7 +126,7 @@ export default function Index() {
           color="textSecondary"
           component="p"
         >
-          Something here to give the footer a purpose!
+          Stay hydrated | Stay Home | stay Fit
         </Typography>
         <Copyright />
       </footer>
