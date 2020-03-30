@@ -56,11 +56,11 @@ const Index = props => {
     const audioCtx = new AudioContext()
 
     if (seconds === 2 || seconds === 1) {
-      beep(10, 600, 10, audioCtx)
+      beep(50, 700, 10, audioCtx)
     }
 
     if (seconds === 0) {
-      beep(35, 1000, 40, audioCtx)
+      beep(80, 1000, 40, audioCtx)
     }
 
     let interval = null
