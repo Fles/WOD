@@ -14,7 +14,38 @@ export default class WodApp extends App {
         sequence: JSON.parse(localStorage.getItem('wodSequence')),
       })
     } else {
-      localStorage.setItem('wodSequence', JSON.stringify([1, 2, 7, 11]))
+      localStorage.setItem(
+        'wodSequence',
+        JSON.stringify([
+          1,
+          4,
+          7,
+          10,
+          13,
+          16,
+          22,
+          19,
+          25,
+          2,
+          5,
+          8,
+          11,
+          14,
+          17,
+          23,
+          20,
+          26,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          24,
+          21,
+          27,
+        ])
+      )
       //Router.push('/')
     }
   }

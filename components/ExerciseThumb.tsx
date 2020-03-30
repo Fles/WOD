@@ -13,23 +13,27 @@ import WodContext from '../components/WodContext'
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      width: 200,
-      height: 200,
+      width: 170,
+      height: 170,
       margin: 5,
       cursor: 'pointer',
     },
     media: {
       display: 'block',
-      height: 150,
-      width: 150,
+      height: 170,
+      width: 170,
       margin: 'auto',
-      marginTop: 20,
+      marginTop: '-15px',
     },
     positionIcon: {
-      position: 'absolute',
+      maxHeight: 30,
     },
     avatar: {
       backgroundColor: green[500],
+    },
+    title: {
+      marginLeft: 10,
+      fontSize: '0.55em',
     },
   })
 )
@@ -53,6 +57,7 @@ export default function ExerciseThumb({ id, media, name, difficulty }) {
         >
           {inSequence ? position : <RadioButtonUncheckedIcon />}
         </Avatar>
+        <Typography className={classes.title}>{name}</Typography>
       </IconButton>
       <CardMedia
         className={classes.media}
@@ -62,7 +67,6 @@ export default function ExerciseThumb({ id, media, name, difficulty }) {
         autoPlay={false}
         loop={true}
       />
-      <Typography align="center">{name}</Typography>
     </Card>
   )
 }

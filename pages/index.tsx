@@ -5,16 +5,37 @@ import ExerciseCard from '../components/ExerciseCard'
 import LinearProgress from '@material-ui/core/LinearProgress'
 import { makeTraining } from '../tools/makeTraining'
 import { Exercise } from '../types'
+import { useContext } from 'react'
+import WodContext from '../components/WodContext'
 
 const Index = ({ exercises }) => {
+  const { sequence } = useContext(WodContext)
+
+  const PREP_TIME = 10
+  const EXEC_TIME = 45
+  const REST_TIME = 15
+
+  const sortedExercises = sequence.map(id =>
+    exercises.find(exe => id === exe.id)
+  )
+
+  const training = makeTraining(
+    sortedExercises,
+    PREP_TIME,
+    EXEC_TIME,
+    REST_TIME
+  )
+
   const [isActive, setIsActive] = useState(true)
   const [current, setCurrent] = useState(0)
-  const currentExercise: Exercise = exercises[current]
-  const nextExercise: Exercise = exercises[current + 1]
+
+  const currentExercise: Exercise = training[current]
+  const nextExercise: Exercise = training[current + 1]
+
   const [seconds, setSeconds] = useState(currentExercise.time)
 
   const normalizeTrainingTime = current =>
-    ((current - 0) * 100) / (exercises.length - 0)
+    ((current - 0) * 100) / (training.length - 0)
   const normalizeExerciseTime = value =>
     100 - ((value - 1) * 100) / (currentExercise.time - 1)
 
@@ -78,7 +99,7 @@ const Index = ({ exercises }) => {
 Index.getInitialProps = async function() {
   const exercises = await require('../public/exercises.json')
   return {
-    exercises: makeTraining(exercises, 10, 45, 10),
+    exercises,
   }
 }
 
