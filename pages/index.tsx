@@ -7,8 +7,9 @@ import { makeTraining } from '../tools/makeTraining'
 import { Exercise } from '../types'
 import { useContext } from 'react'
 import WodContext from '../components/WodContext'
+import { beep } from '../tools/beep'
 
-const Index = ({ exercises }) => {
+const Index = props => {
   const { sequence } = useContext(WodContext)
 
   const PREP_TIME = 10
@@ -16,7 +17,7 @@ const Index = ({ exercises }) => {
   const REST_TIME = 15
 
   const sortedExercises = sequence.map(id =>
-    exercises.find(exe => id === exe.id)
+    props.exercises.find(exe => id === exe.id)
   )
 
   const training = makeTraining(
@@ -52,8 +53,17 @@ const Index = ({ exercises }) => {
   }
 
   React.useEffect(() => {
-    let interval = null
+    const audioCtx = new AudioContext()
 
+    if (seconds === 2 || seconds === 1) {
+      beep(10, 600, 10, audioCtx)
+    }
+
+    if (seconds === 0) {
+      beep(35, 1000, 40, audioCtx)
+    }
+
+    let interval = null
     if (isActive) {
       interval = setInterval(() => {
         seconds >= 0 && setSeconds(seconds => seconds - 1)
@@ -96,8 +106,9 @@ const Index = ({ exercises }) => {
   )
 }
 
-Index.getInitialProps = async function() {
+Index.getInitialProps = async function(c) {
   const exercises = await require('../public/exercises.json')
+
   return {
     exercises,
   }
