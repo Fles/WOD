@@ -1,15 +1,13 @@
-import React, { useState, useEffect, useContext } from 'react'
-import ReactDOM from 'react-dom'
-// import Slide from "react-swipeable-views";
-import Button from '@material-ui/core/Button'
+import React, { useState } from 'react'
+import Grid from '@material-ui/core/Grid'
+import Paper from '@material-ui/core/Paper'
+import ExerciseCard from '../components/ExerciseCard'
+import LinearProgress from '@material-ui/core/LinearProgress'
 import { makeTraining } from '../tools/makeTraining'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
-import { red, blue, green } from '@material-ui/core/colors'
-import { AutoRotatingCarousel, Slide } from 'material-auto-rotating-carousel'
-import WodContext from '../components/WodContext'
 import { Exercise } from '../types'
+import { useContext } from 'react'
+import WodContext from '../components/WodContext'
 import { beep } from '../tools/beep'
-import { CardMedia } from '@material-ui/core'
 
 const Start = props => {
   const { sequence } = useContext(WodContext)
@@ -76,41 +74,34 @@ const Start = props => {
     return () => clearInterval(interval)
   }, [isActive, seconds])
 
-  const [handleOpen, setHandleOpen] = useState({ open: true })
-  const handleClick = () => {
-    setHandleOpen({ open: true })
-  }
-  const matches = useMediaQuery('(max-width:1200px)')
   return (
     <div>
-      <AutoRotatingCarousel
-        label={null}
-        open={handleOpen.open}
-        onClose={() => setHandleOpen({ open: false })}
-        onStart={() => setHandleOpen({ open: false })}
-        autoplay={true}
-        mobile={matches}
-      >
-        {training.map(({ name, media, instructions }) => {
-          return (
-            <Slide
-              media={
-                <CardMedia
-                  component="video"
-                  image={`/images/${media}.mp4`}
-                  title={name}
-                  autoPlay={true}
-                  loop={true}
-                />
-              }
-              mediaBackgroundStyle={{ backgroundColor: '#fff' }}
-              style={{ backgroundColor: '#aaa' }}
-              title={name}
-              subtitle={null}
+      <LinearProgress
+        variant="determinate"
+        value={normalizeTrainingTime(current)}
+      />
+      <Grid container justify="space-around" alignItems="center">
+        <Grid item xs={8}>
+          <Paper>
+            <ExerciseCard
+              {...currentExercise}
+              key={currentExercise.name}
+              progress={seconds}
             />
-          )
-        })}
-      </AutoRotatingCarousel>
+            <LinearProgress
+              variant="determinate"
+              value={normalizeExerciseTime(seconds)}
+            />
+          </Paper>
+        </Grid>
+        {nextExercise ? (
+          <Grid item xs={3}>
+            <Paper>
+              <ExerciseCard {...nextExercise} key={nextExercise.name} />
+            </Paper>
+          </Grid>
+        ) : null}
+      </Grid>
     </div>
   )
 }
