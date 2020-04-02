@@ -76,24 +76,21 @@ const Start = props => {
     return () => clearInterval(interval)
   }, [isActive, seconds])
 
-  const [handleOpen, setHandleOpen] = useState({ open: true })
-  const handleClick = () => {
-    setHandleOpen({ open: true })
-  }
-  const matches = useMediaQuery('(max-width:1200px)')
+  const matches = useMediaQuery('(max-width:1800px)')
   return (
     <div>
       <AutoRotatingCarousel
         label={null}
-        open={handleOpen.open}
-        onClose={() => setHandleOpen({ open: false })}
-        onStart={() => setHandleOpen({ open: false })}
+        open={true}
+        onClose={() => {}}
+        onStart={() => {}}
         autoplay={true}
         mobile={matches}
       >
         {training.map(({ name, media, instructions }) => {
           return (
             <Slide
+              key={name}
               media={
                 <CardMedia
                   component="video"
