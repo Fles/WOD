@@ -30,21 +30,6 @@ const Exercises = ({ exercises }) => {
 
   return (
     <div className={classes.root}>
-      <Button
-        variant="contained"
-        color="primary"
-        onClick={() => Router.push('/')}
-      >
-        Back
-      </Button>
-      <Button
-        variant="contained"
-        color="primary"
-        onClick={() => Router.push('/start')}
-      >
-        Start
-      </Button>
-
       <GridList cellHeight={280} className={classes.grid}>
         {exercises.map((exe: Exercise) => (
           <ExerciseThumb {...exe} key={exe.name} />

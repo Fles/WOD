@@ -13,18 +13,23 @@ import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
 import Link from '@material-ui/core/Link'
-import { Stepper, Step, StepContent, StepLabel } from '@material-ui/core'
+import {
+  Stepper,
+  Step,
+  StepContent,
+  StepLabel,
+  IconButton,
+  SvgIcon,
+} from '@material-ui/core'
 import Router from 'next/router'
+import MenuIcon from '@material-ui/icons/Menu'
+import Logo from '../components/Logo'
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{' '}
+      <Link color="inherit" href=""></Link>
       {new Date().getFullYear()}
-      {'.'}
     </Typography>
   )
 }
@@ -35,10 +40,7 @@ const useStyles = makeStyles(theme => ({
   },
   heroContent: {
     backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6),
-  },
-  heroButtons: {
-    marginTop: theme.spacing(4),
+    padding: theme.spacing(4, 0, 2),
   },
   cardGrid: {
     paddingTop: theme.spacing(8),
@@ -58,6 +60,12 @@ const useStyles = makeStyles(theme => ({
   footer: {
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(6),
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
   },
 }))
 
@@ -89,29 +97,10 @@ export default function Index() {
             >
               Functional training made easy
             </Typography>
-            <div className={classes.heroButtons}>
-              <Grid container spacing={2} justify="center">
-                <Grid item>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={() => Router.push('/start')}
-                  >
-                    Start
-                  </Button>
-                </Grid>
-                <Grid item>
-                  <Button
-                    variant="outlined"
-                    color="primary"
-                    onClick={() => Router.push('/exercises')}
-                  >
-                    Edit training
-                  </Button>
-                </Grid>
-              </Grid>
-            </div>
           </Container>
+          <Typography align="center">
+            <SvgIcon component={Logo} />
+          </Typography>
         </div>
       </main>
 
@@ -126,7 +115,7 @@ export default function Index() {
           color="textSecondary"
           component="p"
         >
-          Stay hydrated | Stay Home | stay Fit
+          Stay Hydrated | Stay Home | Stay Fit
         </Typography>
         <Copyright />
       </footer>
