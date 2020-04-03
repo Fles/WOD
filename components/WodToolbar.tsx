@@ -30,7 +30,7 @@ export default function WodToolbar(props) {
 
   const options = [
     { name: 'home', path: '/' },
-    { name: 'start', path: '/start' },
+    { name: 'play', path: '/play' },
     { name: 'exercises', path: '/exercises' },
   ]
 
