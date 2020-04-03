@@ -11,9 +11,10 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import Grid from '@material-ui/core/Grid'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles, createStyles } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
 import Link from '@material-ui/core/Link'
+
 import {
   Stepper,
   Step,
@@ -24,9 +25,18 @@ import {
 import Router from 'next/router'
 import MenuIcon from '@material-ui/icons/Menu'
 
+const useStyles = makeStyles(() =>
+  createStyles({
+    appbar: {
+      background: '#ddd',
+    },
+  })
+)
+
 export default function WodToolbar(props) {
   const router = useRouter()
   const path = router.pathname
+  const classes = useStyles()
 
   const options = [
     { name: 'home', path: '/' },
@@ -35,22 +45,24 @@ export default function WodToolbar(props) {
   ]
 
   return (
-    <Toolbar>
-      <Grid container spacing={2}>
-        {options.map(o => {
-          return (
-            <Grid item>
-              <Button
-                variant="text"
-                color={path === o.path ? 'primary' : 'secondary'}
-                onClick={() => Router.push(o.path)}
-              >
-                {o.name}
-              </Button>
-            </Grid>
-          )
-        })}
-      </Grid>
-    </Toolbar>
+    <AppBar position="static" className={classes.appbar} color="transparent">
+      <Toolbar>
+        <Grid container spacing={2}>
+          {options.map((o, i) => {
+            return (
+              <Grid key={i} item>
+                <Button
+                  variant="text"
+                  color={path === o.path ? 'primary' : 'secondary'}
+                  onClick={() => Router.push(o.path)}
+                >
+                  {o.name}
+                </Button>
+              </Grid>
+            )
+          })}
+        </Grid>
+      </Toolbar>
+    </AppBar>
   )
 }

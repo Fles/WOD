@@ -90,6 +90,7 @@ export default class WodApp extends App {
         }}
       >
         <WodToolbar />
+
         <Component {...pageProps} />
       </WodContext.Provider>
     )
