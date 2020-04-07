@@ -1,6 +1,6 @@
 import React from 'react'
 import App from 'next/app'
-import WodToolbar from '../components/WodToolbar'
+import PersistentDrawerLeft from '../components/WodPersistentDrawerLeft'
 import WodContext from '../components/WodContext'
 
 export default class WodApp extends App {
@@ -89,9 +89,9 @@ export default class WodApp extends App {
           find,
         }}
       >
-        <WodToolbar />
-
-        <Component {...pageProps} />
+        <PersistentDrawerLeft>
+          <Component {...pageProps} />
+        </PersistentDrawerLeft>
       </WodContext.Provider>
     )
   }
