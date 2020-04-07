@@ -101,27 +101,7 @@ export default function ExerciseCard({
         autoPlay={true}
         loop={true}
       />
-      <CardActions disableSpacing>
-        <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded,
-          })}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </IconButton>
-      </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography paragraph>Difficulty: {difficulty}</Typography>
-          <Typography paragraph>Instructions: {instructions}</Typography>
-          {target.map(data => {
-            return <Chip key={data} label={data} className={classes.chip} />
-          })}
-        </CardContent>
-      </Collapse>
+      <CardActions disableSpacing></CardActions>
     </Card>
   )
 }

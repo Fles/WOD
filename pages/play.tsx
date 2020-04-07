@@ -32,6 +32,7 @@ const Start = props => {
 
   const currentExercise: Exercise = training[current]
   const nextExercise: Exercise = training[current + 1]
+  const nextNextExercise: Exercise = training[current + 2]
 
   const [seconds, setSeconds] = useState(currentExercise.time)
 
@@ -95,9 +96,16 @@ const Start = props => {
           </Paper>
         </Grid>
         {nextExercise ? (
-          <Grid item xs={3}>
+          <Grid item xs={nextExercise.name === 'Rest' ? 1 : 2}>
             <Paper>
               <ExerciseCard {...nextExercise} key={nextExercise.name} />
+            </Paper>
+          </Grid>
+        ) : null}
+        {nextNextExercise ? (
+          <Grid item xs={nextNextExercise.name === 'Rest' ? 1 : 2}>
+            <Paper>
+              <ExerciseCard {...nextNextExercise} key={nextNextExercise.name} />
             </Paper>
           </Grid>
         ) : null}
