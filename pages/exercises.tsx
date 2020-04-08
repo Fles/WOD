@@ -12,13 +12,14 @@ import Paper from '@material-ui/core/Paper'
 import ExerciseThumb from '../components/ExerciseThumb'
 import { Grid, Button } from '@material-ui/core'
 import { Exercise } from '../types'
+import { useContext } from 'react'
+import WodContext from '../components/WodContext'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 1,
-
-      margin: '30px 150px',
+      margin: '10px 150px',
     },
     grid: {},
     icon: {
@@ -29,14 +30,33 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const Exercises = ({ exercises }) => {
   const classes = useStyles()
+  const { sequence, find } = useContext(WodContext)
+  /* 
+  const selected = sequence
+    .filter(({ props }) => props.position !== 0)
+    .sort((a, b) => b.position - a.position)
+ */
+  const selected = sequence
+    .map(id => exercises.find(exe => id === exe.id))
+    .map((exe: Exercise) => {
+      return (
+        <ExerciseThumb {...exe} position={find(exe.id) + 1} key={exe.name} />
+      )
+    })
+
+  const unSelected = exercises
+    .filter(e => find(e.id) < 0)
+    .map((exe: Exercise) => {
+      return (
+        <ExerciseThumb {...exe} position={find(exe.id) + 1} key={exe.name} />
+      )
+    })
 
   return (
     <div className={classes.root}>
-      <GridList cellHeight={280} className={classes.grid}>
-        {exercises.map((exe: Exercise) => (
-          <ExerciseThumb {...exe} key={exe.name} />
-        ))}
-      </GridList>
+      <GridList className={classes.grid}>{selected}</GridList>
+
+      <GridList className={classes.grid}>{unSelected}</GridList>
     </div>
   )
 }

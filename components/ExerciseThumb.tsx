@@ -38,24 +38,22 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-export default function ExerciseThumb({ id, media, name, difficulty }) {
+export default function ExerciseThumb({ id, media, name, position }) {
   const classes = useStyles()
-  const { sequence, add, remove, find } = useContext(WodContext)
-  const position = find(id) + 1
-  const inSequence = position > 0
+  const { add, remove } = useContext(WodContext)
 
   return (
     <Card
       key={name}
       className={classes.root}
-      onClick={() => (inSequence ? remove(id) : add(id))}
+      onClick={() => (position > 0 ? remove(id) : add(id))}
     >
       <IconButton aria-label="icon" className={classes.positionIcon}>
         <Avatar
           aria-label="position"
-          className={inSequence ? classes.avatar : null}
+          className={position > 0 ? classes.avatar : null}
         >
-          {inSequence ? position : <RadioButtonUncheckedIcon />}
+          {position > 0 ? position : <RadioButtonUncheckedIcon />}
         </Avatar>
         <Typography className={classes.title}>{name}</Typography>
       </IconButton>
