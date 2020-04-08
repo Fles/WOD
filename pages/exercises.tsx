@@ -10,7 +10,7 @@ import InfoIcon from '@material-ui/icons/Info'
 import CardMedia from '@material-ui/core/CardMedia'
 import Paper from '@material-ui/core/Paper'
 import ExerciseThumb from '../components/ExerciseThumb'
-import { Grid, Button } from '@material-ui/core'
+import { Grid, Button, Container } from '@material-ui/core'
 import { Exercise } from '../types'
 import { useContext } from 'react'
 import WodContext from '../components/WodContext'
@@ -18,8 +18,7 @@ import WodContext from '../components/WodContext'
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      flexGrow: 1,
-      margin: '10px 150px',
+      marginTop: 20,
     },
     grid: {},
     icon: {
@@ -31,11 +30,6 @@ const useStyles = makeStyles((theme: Theme) =>
 const Exercises = ({ exercises }) => {
   const classes = useStyles()
   const { sequence, find } = useContext(WodContext)
-  /* 
-  const selected = sequence
-    .filter(({ props }) => props.position !== 0)
-    .sort((a, b) => b.position - a.position)
- */
   const selected = sequence
     .map(id => exercises.find(exe => id === exe.id))
     .map((exe: Exercise) => {
@@ -53,11 +47,11 @@ const Exercises = ({ exercises }) => {
     })
 
   return (
-    <div className={classes.root}>
-      <GridList className={classes.grid}>{selected}</GridList>
-
-      <GridList className={classes.grid}>{unSelected}</GridList>
-    </div>
+    <Container maxWidth="md" className={classes.root}>
+      <GridList className={classes.grid}>
+        {selected.concat(unSelected)}
+      </GridList>
+    </Container>
   )
 }
 
