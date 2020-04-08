@@ -117,9 +117,7 @@ export default function PersistentDrawerLeft(props?: any) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            WOD
-          </Typography>
+          <Typography variant="h6" noWrap></Typography>
         </Toolbar>
       </AppBar>
       <Drawer
