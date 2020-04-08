@@ -101,6 +101,15 @@ export default function Index() {
           <Typography align="center">
             <SvgIcon component={Logo} />
           </Typography>
+          <Typography align="center">
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={() => Router.push('/play')}
+            >
+              Play
+            </Button>
+          </Typography>
         </div>
       </main>
 
