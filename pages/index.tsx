@@ -28,7 +28,6 @@ import Logo from '../components/Logo'
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      <Link color="inherit" href="#"></Link>
       {new Date().getFullYear()}
     </Typography>
   )

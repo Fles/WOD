@@ -2,6 +2,7 @@ import React from 'react'
 import App from 'next/app'
 import PersistentDrawerLeft from '../components/WodPersistentDrawerLeft'
 import WodContext from '../components/WodContext'
+import Layout from '../components/Layout'
 
 export default class WodApp extends App {
   state = {
@@ -80,19 +81,21 @@ export default class WodApp extends App {
     const { add, remove, clear, find } = this
 
     return (
-      <WodContext.Provider
-        value={{
-          sequence,
-          add,
-          remove,
-          clear,
-          find,
-        }}
-      >
-        <PersistentDrawerLeft>
-          <Component {...pageProps} />
-        </PersistentDrawerLeft>
-      </WodContext.Provider>
+      <Layout>
+        <WodContext.Provider
+          value={{
+            sequence,
+            add,
+            remove,
+            clear,
+            find,
+          }}
+        >
+          <PersistentDrawerLeft>
+            <Component {...pageProps} />
+          </PersistentDrawerLeft>
+        </WodContext.Provider>
+      </Layout>
     )
   }
 }

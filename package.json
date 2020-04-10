@@ -12,6 +12,7 @@
     "next": "^9.3.3",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-ga": "^2.7.0",
     "react-swipeable-views": "^0.13.3"
   },
   "devDependencies": {
