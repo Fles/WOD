@@ -8,6 +8,7 @@ import { Exercise } from '../types'
 import { useContext } from 'react'
 import WodContext from '../components/WodContext'
 import { beep } from '../tools/beep'
+import { Typography } from '@material-ui/core'
 
 const Start = props => {
   const { sequence } = useContext(WodContext)
@@ -97,6 +98,9 @@ const Start = props => {
         </Grid>
         {nextExercise ? (
           <Grid item xs={nextExercise.name === 'Rest' ? 1 : 2}>
+            {nextExercise.name && (
+              <Typography variant="overline">What's next</Typography>
+            )}
             <Paper>
               <ExerciseCard {...nextExercise} key={nextExercise.name} />
             </Paper>

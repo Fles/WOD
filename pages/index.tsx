@@ -28,7 +28,7 @@ import Logo from '../components/Logo'
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      <Link color="inherit" href=""></Link>
+      <Link color="inherit" href="#"></Link>
       {new Date().getFullYear()}
     </Typography>
   )
@@ -101,6 +101,7 @@ export default function Index() {
           <Typography align="center">
             <SvgIcon component={Logo} />
           </Typography>
+
           <Typography align="center">
             <Button
               variant="contained"
@@ -109,6 +110,10 @@ export default function Index() {
             >
               Play
             </Button>
+          </Typography>
+          <br />
+          <Typography align="center">
+            Grab a mat, press play and follow the exercise.
           </Typography>
         </div>
       </main>
