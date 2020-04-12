@@ -14,6 +14,8 @@ import { Grid, Button, Container } from '@material-ui/core'
 import { Exercise } from '../types'
 import { useContext } from 'react'
 import WodContext from '../components/WodContext'
+import ShuffleIcon from '@material-ui/icons/Shuffle'
+import HighlightOffIcon from '@material-ui/icons/HighlightOff'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -21,6 +23,10 @@ const useStyles = makeStyles((theme: Theme) =>
       marginTop: 20,
     },
     grid: {},
+    menuButton: {
+      marginBottom: 15,
+      marginRight: 15,
+    },
     icon: {
       color: 'rgba(255, 255, 255, 0.54)',
     },
@@ -29,7 +35,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const Exercises = ({ exercises }) => {
   const classes = useStyles()
-  const { sequence, find } = useContext(WodContext)
+  const { sequence, find, clear, shuffle } = useContext(WodContext)
   const selected = sequence
     .map(id => exercises.find(exe => id === exe.id))
     .map((exe: Exercise) => {
@@ -48,6 +54,26 @@ const Exercises = ({ exercises }) => {
 
   return (
     <Container maxWidth="md" className={classes.root}>
+      <Button
+        size="small"
+        className={classes.menuButton}
+        color="secondary"
+        variant="contained"
+        startIcon={<HighlightOffIcon />}
+        onClick={clear}
+      >
+        {sequence.length > 0 ? 'deselect all' : 'select all'}
+      </Button>
+      <Button
+        size="small"
+        className={classes.menuButton}
+        color="secondary"
+        variant="contained"
+        startIcon={<ShuffleIcon />}
+        onClick={shuffle}
+      >
+        shuffle
+      </Button>
       <GridList className={classes.grid}>
         {selected.concat(unSelected)}
       </GridList>

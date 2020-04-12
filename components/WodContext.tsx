@@ -6,6 +6,7 @@ const WodContext = createContext({
   remove: _ => _,
   clear: _ => _,
   find: _ => _,
+  shuffle: _ => _,
 })
 
 export default WodContext

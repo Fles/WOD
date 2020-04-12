@@ -3,6 +3,7 @@ import App from 'next/app'
 import PersistentDrawerLeft from '../components/WodPersistentDrawerLeft'
 import WodContext from '../components/WodContext'
 import Layout from '../components/Layout'
+import shuffle from '../tools/shuffle'
 
 export default class WodApp extends App {
   state = {
@@ -75,10 +76,12 @@ export default class WodApp extends App {
 
   find = id => this.state.sequence.indexOf(id)
 
+  shuffle = () => this.setState({ sequence: [...shuffle(this.state.sequence)] })
+
   render() {
     const { Component, pageProps } = this.props
     const { sequence } = this.state
-    const { add, remove, clear, find } = this
+    const { add, remove, clear, find, shuffle } = this
 
     return (
       <Layout>
@@ -89,6 +92,7 @@ export default class WodApp extends App {
             remove,
             clear,
             find,
+            shuffle,
           }}
         >
           <PersistentDrawerLeft>
