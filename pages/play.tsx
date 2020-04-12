@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import ExerciseCard from '../components/ExerciseCard'
+import HorizontalLinearStepper from '../components/WodStepper'
 import LinearProgress from '@material-ui/core/LinearProgress'
 import { makeTraining } from '../tools/makeTraining'
 import { Exercise } from '../types'
@@ -78,6 +79,7 @@ const Start = props => {
 
   return (
     <div>
+      <HorizontalLinearStepper {...currentExercise} training={training} />
       <LinearProgress
         variant="determinate"
         value={normalizeTrainingTime(current)}
