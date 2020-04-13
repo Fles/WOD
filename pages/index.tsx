@@ -100,7 +100,11 @@ export default function Index() {
           <Typography align="center">
             <SvgIcon component={Logo} />
           </Typography>
-
+          <br />
+          <Typography variant="subtitle2" align="center">
+            30 exercises = 30 minutes
+          </Typography>
+          <br />
           <Typography align="center">
             <Button
               variant="contained"
@@ -109,10 +113,6 @@ export default function Index() {
             >
               Play
             </Button>
-          </Typography>
-          <br />
-          <Typography align="center">
-            Grab a mat, press play and follow the exercise.
           </Typography>
         </div>
       </main>
