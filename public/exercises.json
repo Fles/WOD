@@ -279,5 +279,39 @@
     ],
     "instructions": "Start in a plank position, resting on your elbows and toes, with straight legs and feet together. Make your body as rigid as you can from your feet to your head to keep it in a straight “plank-like” shape side on. Do this by tensing your quads to lift your knee caps up your thighs, squeezing your glutes together, bracing your core and drawing your belly button up away from the floor, whilst at the same time pressing down into the floor with your elbows. Pull your right knee up and into your chest, then straighten your right leg and raise it up toward the ceiling. Swing it back down, pulling your right knee into your chest again to repeat. Ensure you keep your core tight throughout, with your chin tucked in.",
     "media": "plank-crunch-and-kickback-right"
+  },
+  {
+    "id": 28,
+    "name": "Steam engine",
+    "type": "exercise",
+    "difficulty": "easy",
+    "target": ["abs", "glutes", "quadriceps"],
+    "instructions": "Start in a standing position with your feet at shoulder width and your hands interlaced behind your head. From here, lower your left elbow down and across your chest as you lift your right knee up and in to your chest so that your left elbow and right knee connect. As they touch, squeeze your abs and obliques to push your elbow down into your knee. Then return your right foot to the floor and stand upright again, before repeating the movement on the other side with your right elbow and left knee.",
+    "media": "steam-engine"
+  },
+  {
+    "id": 29,
+    "name": "Quick step lunge and jump",
+    "type": "exercise",
+    "difficulty": "hard",
+    "target": ["calves", "glutes", "hamstrings", "quadriceps"],
+    "instructions": "Stand with feet hip-width and bend forward slightly from the waist. Bend your elbows to approximately 90 degrees and keep them at this angle during the exercise. Jump your right foot back, keeping your left foot flat on the floor, quickly bring your right knee up, at the same time swing your right arm back and left arm forwards and up, as if you were running on the spot. Repeat this twice, then simultaneously jump your right foot forward and left foot back to repat on the other side.",
+    "media": "quick-step-lunge-and-jump"
+  },
+  {
+    "id": 30,
+    "name": "Skaters",
+    "type": "exercise",
+    "difficulty": "medium",
+    "target": [
+      "upper back",
+      "lower back",
+      "calves",
+      "glutes",
+      "hamstrings",
+      "quadriceps"
+    ],
+    "instructions": "Before you start make sure you have space either side of you to be able to jump side to side. Start by crouching down on your left leg, lifting your right leg out behind you and reaching down and across to touch your left foot with your right hand. Then jump sideways off your left foot and land on your right foot, bending your knee to absorb the impact. As you jump pull your right arm back by your side and reach across and down with your left arm to touch your right foot. Pause here to make sure you are balanced and ready to jump from your right foot across to your left foot to return to the start position. Keep leaning forward to a 45 degree angle with your upper body during your sideways jumps. Imagine you are a speed skater powering from one foot to the other.",
+    "media": "skater"
   }
 ]
