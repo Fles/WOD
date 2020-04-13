@@ -16,6 +16,7 @@ export default class WodApp extends App {
         sequence: JSON.parse(localStorage.getItem('wodSequence')),
       })
     } else {
+      localStorage.clear()
       localStorage.setItem(
         'wodSequence',
         JSON.stringify([
