@@ -4,10 +4,11 @@ import PersistentDrawerLeft from '../components/WodPersistentDrawerLeft'
 import WodContext from '../components/WodContext'
 import Layout from '../components/Layout'
 import shuffle from '../tools/shuffle'
-
+import LoginForm from '../components/LoginForm'
 export default class WodApp extends App {
   state = {
     sequence: [],
+    auth: false,
   }
 
   componentDidMount = () => {
@@ -89,20 +90,32 @@ export default class WodApp extends App {
 
     return (
       <Layout>
-        <WodContext.Provider
-          value={{
-            sequence,
-            add,
-            remove,
-            clear,
-            find,
-            shuffle,
+        <LoginForm
+          submit={data => {
+            if (data === 'eX3') {
+              this.setState({
+                auth: true,
+              })
+            }
           }}
-        >
-          <PersistentDrawerLeft>
-            <Component {...pageProps} />
-          </PersistentDrawerLeft>
-        </WodContext.Provider>
+        />
+
+        {this.state.auth ? (
+          <WodContext.Provider
+            value={{
+              sequence,
+              add,
+              remove,
+              clear,
+              find,
+              shuffle,
+            }}
+          >
+            <PersistentDrawerLeft>
+              <Component {...pageProps} />
+            </PersistentDrawerLeft>
+          </WodContext.Provider>
+        ) : null}
       </Layout>
     )
   }
