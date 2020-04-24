@@ -90,16 +90,6 @@ export default class WodApp extends App {
 
     return (
       <Layout>
-        <LoginForm
-          submit={data => {
-            if (data === 'eX3') {
-              this.setState({
-                auth: true,
-              })
-            }
-          }}
-        />
-
         {this.state.auth ? (
           <WodContext.Provider
             value={{
@@ -115,7 +105,17 @@ export default class WodApp extends App {
               <Component {...pageProps} />
             </PersistentDrawerLeft>
           </WodContext.Provider>
-        ) : null}
+        ) : (
+          <LoginForm
+            smit={data => {
+              if (data === 'eX3') {
+                this.setState({
+                  auth: true,
+                })
+              }
+            }}
+          />
+        )}
       </Layout>
     )
   }

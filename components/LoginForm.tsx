@@ -7,7 +7,7 @@ import IconButton from '@material-ui/core/IconButton'
 import Input from '@material-ui/core/Input'
 import { Container, Typography } from '@material-ui/core'
 
-export default function LoginForm({ submit }) {
+export default function LoginForm({ smit }) {
   const [data, setData] = useState('')
 
   return (
@@ -21,7 +21,7 @@ export default function LoginForm({ submit }) {
       >
         <Input type="text" onChange={event => setData(event.target.value)} />
         <IconButton
-          onClick={() => submit(data)}
+          onClick={() => smit(data)}
           color="primary"
           aria-label="upload picture"
           component="span"
