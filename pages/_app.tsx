@@ -8,7 +8,7 @@ import LoginForm from '../components/LoginForm'
 export default class WodApp extends App {
   state = {
     sequence: [],
-    auth: false,
+    a0: false,
   }
 
   componentDidMount = () => {
@@ -90,7 +90,7 @@ export default class WodApp extends App {
 
     return (
       <Layout>
-        {this.state.auth ? (
+        {this.state.a0 ? (
           <WodContext.Provider
             value={{
               sequence,
@@ -108,9 +108,9 @@ export default class WodApp extends App {
         ) : (
           <LoginForm
             smit={data => {
-              if (data === 'eX3') {
+              if (data === 'Nn | Ii') {
                 this.setState({
-                  auth: true,
+                  a0: true,
                 })
               }
             }}
