@@ -4,14 +4,31 @@ import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline'
 import StopIcon from '@material-ui/icons/Stop'
 import PauseCircleOutlineIcon from '@material-ui/icons/PauseCircleOutline'
 import IconButton from '@material-ui/core/IconButton'
+import Input from '@material-ui/core/Input'
+import { Container, Typography } from '@material-ui/core'
 
 export default function LoginForm({ submit }) {
   const [data, setData] = useState('')
 
   return (
-    <>
-      <input type="text" onChange={event => setData(event.target.value)} />
-      <button onClick={() => submit(data)}>></button>
-    </>
+    <Container>
+      <Typography
+        component="h2"
+        variant="h2"
+        align="center"
+        color="textPrimary"
+        gutterBottom
+      >
+        <Input type="text" onChange={event => setData(event.target.value)} />
+        <IconButton
+          onClick={() => submit(data)}
+          color="primary"
+          aria-label="upload picture"
+          component="span"
+        >
+          <PlayCircleOutlineIcon />
+        </IconButton>
+      </Typography>
+    </Container>
   )
 }
