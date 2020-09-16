@@ -1,3 +1,3 @@
 # WOD
 
-Excercise program
+Excercise program - functional training
