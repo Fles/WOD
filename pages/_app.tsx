@@ -108,7 +108,7 @@ export default class WodApp extends App {
         ) : (
           <LoginForm
             smit={data => {
-              if (data === 'Nn | Ii') {
+              if (data === 'NnIi') {
                 this.setState({
                   a0: true,
                 })
