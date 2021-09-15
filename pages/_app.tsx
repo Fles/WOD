@@ -90,7 +90,7 @@ export default class WodApp extends App {
 
     return (
       <Layout>
-        {this.state.a0 ? (
+        {true ? (
           <WodContext.Provider
             value={{
               sequence,
