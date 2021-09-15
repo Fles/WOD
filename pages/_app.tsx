@@ -5,6 +5,7 @@ import WodContext from '../components/WodContext'
 import Layout from '../components/Layout'
 import shuffle from '../tools/shuffle'
 import LoginForm from '../components/LoginForm'
+
 export default class WodApp extends App {
   state = {
     sequence: [],

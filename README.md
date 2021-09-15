@@ -4,4 +4,4 @@ Functional workout
 
 [Demo](https://wod-psi.now.sh/) 
 
-<sup>pass: `NnIi`<sub>
+<sup><sup>pass: `NnIi`</sup></sup>
